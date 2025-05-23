@@ -11,6 +11,9 @@ const page = () => {
           <Link href={"/profile"}> go to profile</Link>
         </li>
         <li>
+          <Link href={"/change-side"}>server-to-client</Link>
+        </li>
+        <li>
           <Link href={"/product"}>product</Link>
         </li>
       </ul>
