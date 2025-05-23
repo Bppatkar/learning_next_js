@@ -17,14 +17,18 @@
 
 "use client";
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 
 const page = () => {
   const [count, setCount] = useState(0);
+  const router = useRouter();
   return (
     <div>
       <h3>this is a client side component , here is counter value {count}</h3>
       <button onClick={() => setCount(count + 1)}>Inc</button>
       <button onClick={() => setCount(count > 0 ? count - 1 : 0)}>Dec</button>
+      <hr />
+      <button onClick={() => router.push("/")}> Back to Home</button>
     </div>
   );
 };

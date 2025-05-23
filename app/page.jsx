@@ -17,6 +17,7 @@ const page = () => {
           <Link href={"/product"}>product</Link>
         </li>
       </ul>
+      
     </div>
   );
 };
