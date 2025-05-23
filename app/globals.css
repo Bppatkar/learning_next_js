@@ -13,3 +13,27 @@ ul > li{
   font-size: 2rem;
   color: #ec2727;
 }
+
+.product {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.product-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.product-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #666;
+}
+
+.product-rating {
+  font-size: 1.2rem;
+  color: #666;
+}
