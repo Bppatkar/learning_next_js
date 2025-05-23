@@ -8,3 +8,8 @@ ul > li{
   color: #fff;
   text-decoration: none;
 }
+
+.main_heading{
+  font-size: 2rem;
+  color: #ec2727;
+}

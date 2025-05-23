@@ -3,7 +3,7 @@ import React from "react";
 const page = () => {
   return (
     <div>
-      <h1>this is HomePage jsx route</h1>
+      <h2>this is dynamic routing</h2>
     </div>
   );
 };
