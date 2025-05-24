@@ -16,15 +16,43 @@
 //? now we can use any hooks and state management here
 
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-
-
-
 
 const Page = () => {
   const [count, setCount] = useState(0);
   const router = useRouter();
+  const [isIncrementing, setIsIncrementing] = useState(false);
+  const [isDecrementing, setIsDecrementing] = useState(false);
+
+  useEffect(() => {
+    let intetvalId;
+    if (isIncrementing) {
+      intetvalId = setInterval(() => {
+        setCount(count + 1);
+      }, 100);
+    } else if (isDecrementing) {
+      intetvalId = setInterval(() => {
+        setCount(count > 0 ? count - 1 : 0);
+      }, 100);
+    }
+    return () => {
+      clearInterval(intetvalId);
+    };
+  }, [isDecrementing, isIncrementing, count]);
+
+  const handleMouseDown = (type) => {
+    if (type === "increment") {
+      setIsIncrementing(true);
+    } else if (type === "decrement") {
+      setIsDecrementing(true);
+    }
+  };
+
+  const handleMouseUp = () => {
+    setIsDecrementing(false);
+    setIsIncrementing(false);
+  };
 
   return (
     <div className="dark:bg-gray-900 dark:text-white p-6 flex flex-col items-center justify-center min-h-screen">
@@ -33,13 +61,15 @@ const Page = () => {
       <div className="flex gap-4 mb-6">
         <button
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-          onClick={() => setCount(count + 1)}
+          onMouseDown={() => handleMouseDown("increment")}
+          onMouseUp={handleMouseUp}
         >
           Increment
         </button>
         <button
           className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
-          onClick={() => setCount(count > 0 ? count - 1 : 0)}
+          onMouseDown={() => handleMouseDown("decrement")}
+          onMouseUp={handleMouseUp}
         >
           Decrement
         </button>
