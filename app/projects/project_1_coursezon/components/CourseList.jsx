@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import { courses } from "../data.js";
 import { useRouter } from "next/navigation.js";
@@ -7,6 +7,7 @@ const CourseList = () => {
   const router = useRouter();
   return (
     <div className=" min-h-screen bg-gray-900 text-white p-12 sm:px-6 lg:px-8">
+      <button className="mt-6 bg-amber-500 hover:bg-orange-600 text-white font-semibold py-2 px-6 rounded-full transition-colors duration-200" onClick={() => router.back()}> Back to Home</button>
       <div className="max-w-7xl mx-auto">
         <h1 className="text-orange-400 text-5xl sm:text-6xl font-extrabold text-center tracking-tight mt-3 ">
           Welcome To CourseZone Project
@@ -41,7 +42,9 @@ const CourseList = () => {
                     {course.title}
                   </h2>
                   <button
-                    onClick={() => router.push(`/projects/project_1_coursezon/${course.id}`)}
+                    onClick={() =>
+                      router.push(`/projects/project_1_coursezon/${course.id}`)
+                    }
                     type="button"
                     className="bg-amber-500 hover:bg-amber-800 text-white font-semibold py-3 px-8 rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-75"
                   >
