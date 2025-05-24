@@ -118,6 +118,7 @@
 import React from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { products } from "../../data.js";
+import Image from "next/image.js";
 
 // const page = ({ params: { slug } }) => {
 const page = ({ params }) => {
@@ -142,6 +143,12 @@ const page = ({ params }) => {
       {newProductData.map((product) => {
         return (
           <div key={product.title} className="product">
+            <img
+              src="https://images.unsplash.com/photo-1691073112675-9685bc6779bf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="img1"
+              width={"200px"}
+              height={"200px"}
+            />
             <h3 className="product-title">{product.title}</h3>
             <p className="product-price">Price: ${product.price}</p>
             <p className="product-rating">

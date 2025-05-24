@@ -3,13 +3,13 @@ body {
   color: #000;
 }
 
-ul > li{
- list-style: none;
+ul > li {
+  list-style: none;
   color: #fff;
   text-decoration: none;
 }
 
-.main_heading{
+.main_heading {
   font-size: 2rem;
   color: #ec2727;
 }
@@ -36,4 +36,16 @@ ul > li{
 .product-rating {
   font-size: 1.2rem;
   color: #666;
+}
+
+.layout-effect {
+  border: 1px solid black;
+  padding: 5px;
+  font-style: italic;
+  background-color: yellow;
+}
+.layout-effect > h1,
+h2,
+p {
+  color: red;
 }
