@@ -1,7 +1,9 @@
-body {
+@import "tailwindcss";
+
+/* body {
   background-color: #fff;
   color: #000;
-}
+} */
 
 ul > li {
   list-style: none;
