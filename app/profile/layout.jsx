@@ -1,6 +1,11 @@
 import React from "react";
 import ProfileSection from "./components/ProfileSection.jsx";
 
+export const metadata = {
+  title: "Profile Section",
+  description: "this is profile section",
+};
+
 const layout = ({ children }) => {
   return (
     <div>
