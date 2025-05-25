@@ -62,8 +62,10 @@ import React from "react";
 
 const page = () => {
   return (
-    <div>
-      <h1>this is profile page</h1>
+    <div className="bg-gray-100 p-6 rounded-lg shadow-lg">
+      <h1 className="text-3xl font-bold text-gray-800">
+        Welcome to your Profile Page
+      </h1>
     </div>
   );
 };
