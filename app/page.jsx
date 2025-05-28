@@ -41,20 +41,21 @@ const Page = () => {
               Project 1: Coursezon
             </Link>
           </li>
-          <li className="mb-2">
-            <Link
-              href="/projects/project_2_meme-generator"
-              className="text-pink-500 hover:text-pink-700 transition-colors duration-200"
-            >
-              Project 2: Meme Generator
-            </Link>
-          </li>
+
           <li className="mb-2">
             <Link
               href="/fetchData"
               className="text-teal-500 hover:text-teal-700 transition-colors duration-200"
             >
               Fetch Data
+            </Link>
+          </li>
+          <li className="mb-2">
+            <Link
+              href="/projects/project_2_meme-generator"
+              className="text-pink-500 hover:text-pink-700 transition-colors duration-200"
+            >
+              Project 2: Meme Generator
             </Link>
           </li>
         </ul>
