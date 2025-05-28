@@ -59,22 +59,18 @@ const Page = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const getData = async () => {
-    try {
-      const res = await fetch("https://jsonplaceholder.typicode.com/users");
-      if (!res.ok) {
-        throw new Error(`HTTP error! status: ${res.status}`);
-      }
-      const fetchedData = await res.json();
-      setData(fetchedData);
-    } catch (err) {
-      setError(err.message);
-    } finally {
-      setLoading(false);
-    }
-  };
-
   useEffect(() => {
+    const getData = async () => {
+      try {
+        const data = await fetch("https://jsonplaceholder.typicode.com/users");
+        const res = await data.json();
+        setData(res);
+        setLoading(false);
+      } catch (error) {
+        setError(error.message);
+        setLoading(false);
+      }
+    };
     getData();
   }, []);
 
