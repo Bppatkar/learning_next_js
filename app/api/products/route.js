@@ -164,6 +164,7 @@ const products = [
   },
 ];
 
+//! GET request
 // fetching all products
 export async function GET(req) {
   return NextResponse.json({
@@ -173,7 +174,7 @@ export async function GET(req) {
   });
 }
 
-//! POST route
+//! POST request
 //? checking by me
 //* in next_js POST route we get data in "json" from body
 /* export async function POST(req) {
@@ -212,4 +213,37 @@ export async function POST(req) {
     message: "product is added successfully🔥",
     success: true,
   });
+}
+
+//! PUT request
+// update product
+//! here we use route - http://localhost:3000/api/products?id=21
+export async function PUT(req) {
+  try {
+    const { searchParams } = req.nextUrl;
+    const id = searchParams.get("id");
+    const updatedProduct = await req.json();
+
+    //* updating product
+    for (let i = 0; i < products.length; i++) {
+      if (products[i].id == id) {
+        products[i] = updatedProduct;
+      }
+    }
+    //? or we can do same thing with findIndex method
+    /*  const index = products.findIndex((product) => product.id == id);
+    if (index !== -1) {
+      products[index] = { ...products[index], ...updatedProduct }; */
+
+    return NextResponse.json({
+      message: "product is updated successfully🔥",
+      success: true,
+      updatedProduct,
+    });
+  } catch (error) {
+    return NextResponse.json({
+      message: "Failed to update product",
+      success: false,
+    });
+  }
 }
