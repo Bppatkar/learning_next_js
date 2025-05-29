@@ -58,6 +58,14 @@ const Page = () => {
               Project 2: Meme Generator
             </Link>
           </li>
+          <li className="mb-2">
+            <Link
+              href="/api"
+              className="text-cyan-400 hover:text-cyan-600 transition-colors duration-200"
+            >
+              Next.js Backend CRUD Operation
+            </Link>
+          </li>
         </ul>
       </div>
     </div>
