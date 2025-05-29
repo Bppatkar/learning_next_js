@@ -1,4 +1,6 @@
-//! here we use route - http://localhost:3000/api/products
+//! here we use route - http://localhost:3000/api/products/search?query=iphone&price=99999
+//! here we can use route without price- http://localhost:3000/api/products/search?query=Apple
+
 import { NextResponse } from "next/server";
 
 const products = [
@@ -164,52 +166,31 @@ const products = [
   },
 ];
 
-// fetching all products
+// fetching single product
 export async function GET(req) {
-  return NextResponse.json({
-    message: "all products are fetched successfully🔥",
-    success: true,
-    products,
-  });
-}
+  const { searchParams } = req.nextUrl;
+  // console.log("searchParams result", searchParams);
+  const query = searchParams.get("query");
+  // above we use quer after ? if we use bhanu above then we use bhanu here
+  const price = searchParams.get("price");
+  // console.log("we get price and query from searchParam : =", query, price);
 
-//! POST route
-//? checking by me
-//* in next_js POST route we get data in "json" from body
-/* export async function POST(req) {
-  try {
-    const data = await req.json();
-    console.log(data);
+  const searchedProduct = products.filter(
+    (product) =>
+      product.title.toLowerCase().includes(query.toLowerCase()) ||
+      product.price == price
+  );
 
-    products.push(data);
-
+  // console.log("searchedProduct here", searchedProduct);
+  if (searchedProduct.length === 0)
     return NextResponse.json({
-      message: "getting data from Body and check product array",
-      success: true,
-      bodyData: data,
-    });
-  } catch (error) {
-    console.error("Error parsing JSON:", error);
-
-    return NextResponse.json({
-      message: "Failed to parse JSON",
+      message: "product not found",
       success: false,
     });
-  }
-} */
 
-export async function POST(req) {
-  const { title, price, description, category, userRating } = await req.json();
-  products.push({
-    id: products.length + 1,
-    title,
-    price,
-    description,
-    category,
-    userRating,
-  });
   return NextResponse.json({
-    message: "product is added successfully🔥",
+    message: "single product is fetched successfully🔥",
     success: true,
+    searchedProduct,
   });
 }
