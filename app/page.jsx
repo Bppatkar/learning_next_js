@@ -68,7 +68,7 @@ const Page = () => {
           </li>
           <li className="mb-2">
             <Link
-              href="/api"
+              href="/api/project3_auth"
               className="text-rose-400 hover:text-rose-600 transition-colors duration-200"
             >
               Authentication [Register and Login]
