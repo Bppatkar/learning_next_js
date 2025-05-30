@@ -10,8 +10,13 @@ import { NextResponse } from "next/server";
 
 export async function GET(req) {
   return NextResponse.json({
-    message: "For checking more routes use ThunderClient",
+    message: "For checking API use ThunderClient/Postman",
+    description: "all api is working fine",
+    data: {
+      api1: "http://localhost:3000/api/project3_auth?register=true",
+      api2: "http://localhost:3000/api/project3_auth?login=true",
+    },
+    status: 200,
     success: true,
   });
 }
-
