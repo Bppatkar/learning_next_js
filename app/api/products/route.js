@@ -116,6 +116,7 @@ export async function POST(req) {
   return NextResponse.json({
     message: "product is added successfully🔥",
     success: true,
+    products,
   });
 }
 
@@ -168,5 +169,6 @@ export async function DELETE(req) {
   return NextResponse.json({
     message: "product is deleted successfully",
     success: true,
+    products,
   });
 }

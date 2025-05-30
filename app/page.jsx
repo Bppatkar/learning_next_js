@@ -66,6 +66,14 @@ const Page = () => {
               Next.js Backend CRUD Operation
             </Link>
           </li>
+          <li className="mb-2">
+            <Link
+              href="/api"
+              className="text-rose-400 hover:text-rose-600 transition-colors duration-200"
+            >
+              Authentication [Register and Login]
+            </Link>
+          </li>
         </ul>
       </div>
     </div>

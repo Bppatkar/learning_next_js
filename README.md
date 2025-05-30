@@ -68,11 +68,7 @@ Hey there! 👋 I've embarked on an exciting adventure to master Next.js, and I'
 
     - Securing your Next.js app with authentication.
 
-14. **Project 4: Full-Stack E-Commerce App**
-
-    - Building a complete e-commerce platform.
-
-15. **Deployment with Vercel**
+14. **Deployment with Vercel**
 
     - Deploying your Next.js app to Vercel for free.
 
