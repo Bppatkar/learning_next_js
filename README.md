@@ -67,6 +67,8 @@ Hey there! 👋 I've embarked on an exciting adventure to master Next.js, and I'
 13. ** Project 3: Authentication**
 
     - Securing your Next.js app with authentication.
+       -- For login check  Id- **checkuser1@gmail.com** and 
+        --  Password - **123@**
 
 14. **Deployment with Vercel**
 
