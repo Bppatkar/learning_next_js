@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
+
 const Page = () => {
   return (
     <div className="dark:bg-gray-900 dark:text-white min-h-screen text-center mb-1">
@@ -11,7 +12,7 @@ const Page = () => {
         <ul className="list-none mb-6 text-3xl">
           <li className="mb-2">
             <Link
-              href="/profile"
+              href="/profileLearn"
               className="text-blue-500 hover:text-blue-700 transition-colors duration-200"
             >
               Go to Profile
@@ -41,7 +42,6 @@ const Page = () => {
               Project 1: Coursezon
             </Link>
           </li>
-
           <li className="mb-2">
             <Link
               href="/fetchData"
@@ -66,12 +66,9 @@ const Page = () => {
               Next.js Backend CRUD Operation
             </Link>
           </li>
-          <li className="mb-2">
-            <Link
-              href="/api/project3_auth"
-              className="text-rose-400 hover:text-rose-600 transition-colors duration-200"
-            >
-              Authentication [Register and Login]
+          <li className="mb-2 text-rose-400 hover:text-rose-600 transition-colors duration-200">
+            <Link href="/components">
+              Project 3 [Authentication]
             </Link>
           </li>
         </ul>
