@@ -13,7 +13,7 @@ const ProfileSection = () => {
       <ul className="grid grid-cols-2 gap-6 mb-6">
         <li>
           <Link
-            href="/profile/about"
+            href="/profileLearn/about"
             className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200"
           >
             About
@@ -21,7 +21,7 @@ const ProfileSection = () => {
         </li>
         <li>
           <Link
-            href="/profile/login"
+            href="/profileLearn/login"
             className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200"
           >
             Login
@@ -29,7 +29,7 @@ const ProfileSection = () => {
         </li>
         <li>
           <Link
-            href="/profile/forgot-password"
+            href="/profileLearn/forgot-password"
             className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200"
           >
             Forgot Password
@@ -37,7 +37,8 @@ const ProfileSection = () => {
         </li>
       </ul>
       <p className="text-red-500 ">
-        look in address bar <span className="font-bold text-yellow-300">routes are changing</span>
+        look in address bar{" "}
+        <span className="font-bold text-yellow-300">routes are changing</span>
       </p>
       <button
         className="mt-12 bg-amber-500 hover:bg-orange-600 text-white font-semibold py-2 px-6 rounded-full transition-colors duration-200"
